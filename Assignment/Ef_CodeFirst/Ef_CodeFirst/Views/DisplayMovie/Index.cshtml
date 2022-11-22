@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Ef_CodeFirst.Models.DisplayMovies>
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>*@
+
+<h2>Search movie by year</h2>
+@using (Html.BeginForm("Index", "DisplayMovie", FormMethod.Get))
+{
+    <input id="SearchBox" type="text" name="value" />
+
+    <input id="submit" type="submit" name="Search" />
+
+}
+<h2> List  of  Movies</h2>
+
+<table>
+    <tr>
+        <th>Movie Name</th>
+        <th>Released Year</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.MovieName
+            </td>
+            <td>
+                @item.Year
+             </td>
+        </tr>
+
+    }
+</table>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
