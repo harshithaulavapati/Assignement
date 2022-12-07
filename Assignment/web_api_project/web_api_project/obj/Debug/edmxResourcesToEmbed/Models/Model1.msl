@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeetravelbookingsystemModelStoreContainer" CdmEntityContainer="EmployeetravelbookingsystemEntities">
+    <EntitySetMapping Name="Managers">
+      <EntityTypeMapping TypeName="EmployeetravelbookingsystemModel.Manager">
+        <MappingFragment StoreEntitySet="Manager">
+          <ScalarProperty Name="Manager_Id" ColumnName="Manager_Id" />
+          <ScalarProperty Name="Manager_name" ColumnName="Manager_name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="travelagents">
+      <EntityTypeMapping TypeName="EmployeetravelbookingsystemModel.travelagent">
+        <MappingFragment StoreEntitySet="travelagent">
+          <ScalarProperty Name="Travel_id" ColumnName="Travel_id" />
+          <ScalarProperty Name="Travel_name" ColumnName="Travel_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TravelRequests">
+      <EntityTypeMapping TypeName="EmployeetravelbookingsystemModel.TravelRequest">
+        <MappingFragment StoreEntitySet="TravelRequest">
+          <ScalarProperty Name="Request_Id" ColumnName="Request_Id" />
+          <ScalarProperty Name="Request_Date" ColumnName="Request_Date" />
+          <ScalarProperty Name="From_Location" ColumnName="From_Location" />
+          <ScalarProperty Name="To_Location" ColumnName="To_Location" />
+          <ScalarProperty Name="User_type_Id" ColumnName="User_type_Id" />
+          <ScalarProperty Name="Current_Status" ColumnName="Current_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="EmployeetravelbookingsystemModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Login_Id" ColumnName="Login_Id" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="User_type_id" ColumnName="User_type_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Manager_user_id" ColumnName="Manager_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usertypes">
+      <EntityTypeMapping TypeName="EmployeetravelbookingsystemModel.Usertype">
+        <MappingFragment StoreEntitySet="Usertype">
+          <ScalarProperty Name="User_type_Id" ColumnName="User_type_Id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
